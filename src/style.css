@@ -1,0 +1,59 @@
+* {
+  margin:auto;
+  padding: 0%;
+}
+
+.drop-zone {
+  max-width: 400px;
+  height: 200px;
+  padding: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: 4px dashed #009578;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.drop-zone--over {
+  border-style: solid;
+  background-color: rgba(0, 149, 120, 0.1);
+}
+
+.drop-zone__input {
+  display: none; /* Escondemos el input real */
+}
+
+
+
+
+
+
+.drop-zone--loading {
+    cursor: wait;
+    opacity: 0.6;
+    pointer-events: none; /* Evita que el usuario suba otro mientras carga */
+}
+
+/* Un spinner simple */
+.spinner {
+    display: none; /* Escondido por defecto */
+    width: 20px;
+    height: 20px;
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #009578;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-left: 10px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.is-loading .spinner {
+    display: inline-block; /* Se muestra cuando el padre tiene la clase */
+}

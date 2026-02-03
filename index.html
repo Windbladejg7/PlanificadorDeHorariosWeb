@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Planificador de Horarios</title>
+</head>
+
+<body>
+  <div id="app">
+    <div id="drop-zone" class="drop-zone">
+      <span class="drop-zone__prompt">Arrastra tus archivos aquí o haz clic</span>
+      <input type="file" name="myFile" id="file-input" class="drop-zone__input">
+    </div>
+    <div id="file-list"></div>
+    <div id="status-container" class="">
+    <span id="status-text"></span>
+    <div class="spinner"></div>
+</div>
+  </div>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+
+</html>
