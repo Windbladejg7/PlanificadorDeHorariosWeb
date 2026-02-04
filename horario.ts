@@ -244,6 +244,11 @@ document.getElementById('view-profile-btn')?.addEventListener('click', async () 
 function renderSavedSchedules(horarios: any[]) {
     const container = document.getElementById('saved-schedules-list');
     if (!container) return;
+	
+    document.querySelector('.close-modal')?.addEventListener('click', () => {
+        const modal = document.getElementById('profile-modal');
+        modal?.classList.remove('is-visible');
+    });
 
     if (horarios.length === 0) {
         container.innerHTML = "<p class='empty-msg'>Aún no tienes horarios guardados.</p>";
@@ -252,11 +257,6 @@ function renderSavedSchedules(horarios: any[]) {
 
     // 1. Limpiamos el contenedor antes de inyectar nuevos elementos
     container.innerHTML = "";
-
-    document.querySelector('.close-modal')?.addEventListener('click', () => {
-        const modal = document.getElementById('profile-modal');
-        modal?.classList.remove('is-visible');
-    });
 
     // 2. Creamos los elementos uno por uno para asignarles el evento correctamente
     horarios.forEach((h, i) => {
