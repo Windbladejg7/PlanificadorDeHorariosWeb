@@ -1,9 +1,4 @@
 import "./src/style.css"
-import type { Aula } from "./src/main.ts"
-
-interface Horario {
-    dict: Map<string, Aula>
-}
 
 const setLoader = (show: boolean, text: string = "Cargando...") => {
     const loader = document.getElementById('loader-container');
