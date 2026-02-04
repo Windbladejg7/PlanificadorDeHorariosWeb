@@ -304,12 +304,12 @@ const checkAuth = () => {
 
     // Si no hay token y no está en login, al calabozo (login)
     if (!token && !path.includes('login.html')) {
-        window.location.href = '/login.html';
+        window.location.href = '../login.html';
     }
 
     // Si ya está logueado e intenta ir al login, mándalo al index
     if (token && path.includes('login.html')) {
-        window.location.href = '/index.html';
+        window.location.href = '../index.html';
     }
 };
 
