@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tu Horario Planificado</title>
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="logo">
+            <h1>Planificador<span>Académico</span></h1>
+        </div>
+    </header>
+    <div class="auth-container">
+        <div id="loader-container" class="loader-container" style="display: none;">
+            <div class="loader-content">
+                <div class="spinner-auth"></div>
+                <p id="loader-text">Verificando credenciales...</p>
+            </div>
+        </div>
+        <div class="auth-box">
+            <h2 id="auth-title">Iniciar Sesión</h2>
+
+            <form id="auth-form">
+                <div class="input-group" id="name-group" style="display: none;">
+                    <label>Nombre Completo</label>
+                    <input type="text" id="reg-name" placeholder="Tu nombre">
+                </div>
+
+                <div class="input-group">
+                    <label>Correo Electrónico</label>
+                    <input type="email" id="auth-email" required placeholder="correo@ejemplo.com">
+                </div>
+
+                <div class="input-group">
+                    <label>Contraseña</label>
+                    <input type="password" id="auth-password" required placeholder="••••••••">
+                </div>
+
+                <button type="submit" class="btn-auth" id="btn-submit">Entrar</button>
+            </form>
+
+            <p class="auth-footer">
+                <span id="toggle-text">¿No tienes cuenta?</span>
+                <a href="#" id="toggle-link">Regístrate aquí</a>
+            </p>
+        </div>
+    </div>
+
+    <script type="module" src="./login.ts"></script>
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Tu Horario Planificado</title>
+</head>
+
+<body>
+  <header class="main-header">
+    <div class="logo" id="logo-home">
+      <h1>Planificador<span>Académico</span></h1>
+    </div>
+    <div class="user-profile-section">
+      <div class="user-info" id="user-menu-trigger">
+        <span id="user-name-label">Usuario</span>
+        <div class="user-avatar">👤</div>
+      </div>
+      <div class="user-dropdown" id="user-dropdown">
+        <button id="view-profile-btn">Mis Horarios Guardados</button>
+        <button id="logout-btn">Cerrar Sesión</button>
+      </div>
+    </div>
+  </header>
+
+  <div id="profile-modal" class="modal">
+    <div class="modal-content profile-modal-content">
+      <div class="modal-header">
+        <h2>Mis Horarios Guardados</h2>
+        <button class="close-modal">&times;</button>
+      </div>
+      <div id="saved-schedules-list" class="schedules-grid">
+        <p class="empty-msg">Cargando tus horarios...</p>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="horario-container">
+    <div id="loader-container" class="loader-container" style="display: none;">
+      <div class="loader-content">
+        <div class="spinner-auth"></div>
+        <p id="loader-text">Verificando credenciales...</p>
+      </div>
+    </div>
+    <div class="horario-viewer">
+      <div class="controls">
+        <button id="prev-horario" class="btn">Anterior</button>
+        <span id="horario-index">Cargando horarios...</span>
+        <button id="next-horario" class="btn">Siguiente</button>
+        <button id="download-btn" class="btn" style="background-color: #27ae60;">
+          Descargar PNG
+        </button>
+        <button id="save-db-btn" class="btn" style="background-color: #3498db;">
+          💾 Guardar Horarios
+        </button>
+      </div>
+
+      <div class="tabla-contenedor">
+        <div class="grid-horario" id="grid-horario">
+          <div class="grid-header">Hora</div>
+          <div class="grid-header">Lunes</div>
+          <div class="grid-header">Martes</div>
+          <div class="grid-header">Miércoles</div>
+          <div class="grid-header">Jueves</div>
+          <div class="grid-header">Viernes</div>
+          <div class="grid-header">Sábado</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="module" src="./horario.ts"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</body>
+
+</html>
